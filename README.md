@@ -11,7 +11,7 @@
 
 > A production-ready identity reconciliation microservice that links customer contacts across multiple purchases, even when they use different emails and phone numbers.
 
-**[🌐 Live API](https://your-app.onrender.com)** • **[📋 API Docs](#-api-reference)** • **[🧠 Algorithm](#-algorithm-deep-dive)**
+**[🌐 Live API](https://bitespeed-identity-xpss.onrender.com)** • **[📋 API Docs](#-api-reference)** • **[🧠 Algorithm](#-algorithm-deep-dive)**
 
 </div>
 
@@ -20,12 +20,9 @@
 ## 🌐 Live Endpoint
 
 ```
-POST https://<your-render-url>/identify
-GET  https://<your-render-url>/health
+POST https://bitespeed-identity-xpss.onrender.com/identify
+GET  https://bitespeed-identity-xpss.onrender.com/health
 ```
-
-> Replace with your deployed Render URL after deployment.
-
 ---
 
 ## ✨ What Makes This Stand Out
