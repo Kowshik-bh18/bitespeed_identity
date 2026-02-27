@@ -271,7 +271,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 > A completely new contact `george@hillvalley.edu / 919191` is created. No overlap with existing data, so it becomes its own **primary** with empty secondaries.
 
-![out7](./output_samples/out7.png)
+![out7](./output_samples/out6.png)
 
 ---
 
@@ -279,7 +279,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 > Another new contact `biffsucks@hillvalley.edu / 717171` is created independently. At this point two separate primary clusters exist in the database.
 
-![out8](./output_samples/out8.png)
+![out8](./output_samples/out7.png)
 
 ---
 
@@ -287,7 +287,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 > This is the most complex case. Sending `{ email: "george@hillvalley.edu", phoneNumber: "717171" }` **bridges the two clusters**. Since george's contact is older, it remains **primary**. Biff's contact is **demoted to secondary** and linked to george's ID. Both emails and both phone numbers appear in the unified response.
 
-![out9](./output_samples/out9.png)
+![out9](./output_samples/out8.png)
 
 ---
 
@@ -295,7 +295,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 > Sending `{ email: null, phoneNumber: null }` correctly returns a **400 Bad Request** with a descriptive error message — proving the Zod validation layer works as expected.
 
-![out10](./output_samples/out10.png)
+![out10](./output_samples/out9.png)
 
 ---
 
