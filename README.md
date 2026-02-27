@@ -1,4 +1,8 @@
-# 🔍 Bitespeed Identity Reconciliation
+<div align="center">
+
+# 🔎 Bitespeed Identity Reconciliation
+
+</div>
 
 <div align="center">
 
@@ -263,7 +267,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 > Sending `{ email: "mcfly@hillvalley.edu", phoneNumber: null }` also returns the same consolidated contact — proves that looking up via a **secondary contact's email** correctly resolves back to the primary.
 
-![out6](./output_samples/out6.png)
+![out6](./output_samples/out10.png)
 
 ---
 
