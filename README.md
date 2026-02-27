@@ -263,15 +263,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 ---
 
-### Output 6 — Idempotent Lookup by Secondary Email Only
-
-> Sending `{ email: "mcfly@hillvalley.edu", phoneNumber: null }` also returns the same consolidated contact — proves that looking up via a **secondary contact's email** correctly resolves back to the primary.
-
-![out6](./output_samples/out10.png)
-
----
-
-### Output 7 — New Independent Primary Cluster (george)
+### Output 6 — New Independent Primary Cluster (george)
 
 > A completely new contact `george@hillvalley.edu / 919191` is created. No overlap with existing data, so it becomes its own **primary** with empty secondaries.
 
@@ -279,7 +271,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 ---
 
-### Output 8 — Second Independent Primary Cluster (biff)
+### Output 7 — Second Independent Primary Cluster (biff)
 
 > Another new contact `biffsucks@hillvalley.edu / 717171` is created independently. At this point two separate primary clusters exist in the database.
 
@@ -287,7 +279,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 ---
 
-### Output 9 — Cluster Merge (Primary Turns Secondary) ⭐
+### Output 8 — Cluster Merge (Primary Turns Secondary) ⭐
 
 > This is the most complex case. Sending `{ email: "george@hillvalley.edu", phoneNumber: "717171" }` **bridges the two clusters**. Since george's contact is older, it remains **primary**. Biff's contact is **demoted to secondary** and linked to george's ID. Both emails and both phone numbers appear in the unified response.
 
@@ -295,7 +287,7 @@ All scenarios from the Bitespeed spec were manually verified using Postman. Scre
 
 ---
 
-### Output 10 — Validation Error (Both Fields Null)
+### Output 9 — Validation Error (Both Fields Null)
 
 > Sending `{ email: null, phoneNumber: null }` correctly returns a **400 Bad Request** with a descriptive error message — proving the Zod validation layer works as expected.
 
